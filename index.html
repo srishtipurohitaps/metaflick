@@ -7,6 +7,54 @@
     <link rel = "stylesheet" href = "styles.css"/>
 </head>
 <body>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header class="site-header">
+    <a href="index.html" class="logo">Meta<span>Flick</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="marvel.html" class="nav-marvel">Marvel</a></li>
+        <li><a href="dc.html" class="nav-dc">DC</a></li>
+        <li><a href="pjo.html" class="nav-pjo">PJO</a></li>
+      </ul>
+    </nav>
+    </header>
+
+    <main>
+       <div class="page-wrapper">
+       
+        <section class="hero">
+        <p class="hero-eyebrow">🎬 Explore Every Universe</p>
+        <h1 class="hero-title">META<span class="glow">FLICK</span></h1>
+        <p class="hero-tagline">Search the Multiverse of Movies</p>
+ 
+        <div class="search-container">
+          <div class="search-bar-wrap">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input
+              id="search-input"
+              class="search-input"
+              type="text"
+              placeholder="Search any movie, hero, or universe…"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button id="search-btn" class="search-btn">Search</button>
+          </div>
+ 
+          <div class="filter-row">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="marvel">Marvel</button>
+            <button class="filter-btn" data-filter="dc">DC</button>
+            <button class="filter-btn" data-filter="pjo">PJO</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
 </body>
 </html>
