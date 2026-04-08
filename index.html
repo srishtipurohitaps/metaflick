@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8"/>
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
-    <title>MetaFlick - Search the Multiverse of Movies</title>
-    <link rel = "stylesheet" href = "styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MetaFlick - Search the Multiverse of Movies</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
 </head>
 <body>
-    <div id="cursor-dot"></div>
-    <div id="cursor-ring"></div>
 
-    <header class="site-header">
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <header class="site-header">
     <a href="index.html" class="logo">Meta<span>Flick</span></a>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="marvel.html" class="nav-marvel">Marvel</a></li>
-        <li><a href="dc.html" class="nav-dc">DC</a></li>
-        <li><a href="pjo.html" class="nav-pjo">PJO</a></li>
+        <li><a href="dc.html"     class="nav-dc">DC</a></li>
+        <li><a href="pjo.html"    class="nav-pjo">PJO</a></li>
       </ul>
     </nav>
-    </header>
+  </header>
 
-    <main>
-       <div class="page-wrapper">
-       
-        <section class="hero">
+  <main>
+    <div class="page-wrapper">
+
+      <section class="hero">
         <p class="hero-eyebrow">🎬 Explore Every Universe</p>
         <h1 class="hero-title">META<span class="glow">FLICK</span></h1>
         <p class="hero-tagline">Search the Multiverse of Movies</p>
- 
+
         <div class="search-container">
           <div class="search-bar-wrap">
             <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -45,7 +47,7 @@
             />
             <button id="search-btn" class="search-btn">Search</button>
           </div>
- 
+
           <div class="filter-row">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="marvel">Marvel</button>
@@ -54,19 +56,55 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <section class="universes-section" id="universe-portal">
-      <h2>Choose Your Universe</h2>
-      <div class="universe-cards">
-        <a href="marvel.html" class="universe-card universe-card-marvel">
-          <div class="universe-card-icon">❤️</div>
-          <div class="universe-card-name">Marvel</div>
-          <p class="universe-card-desc">Avengers, X-Men, Spiderman and the entire MCU at your fingertips!</p>
-          <span class="universe-card-arrow">→</span>
-        </a>
-      </div>
+      <section class="universes-section" id="universe-portal">
+        <h2>Choose Your Universe</h2>
+        <div class="universe-cards">
+          <a href="marvel.html" class="universe-card universe-card-marvel">
+            <div class="universe-card-icon">🕸️</div>
+            <div class="universe-card-name">Marvel</div>
+            <p class="universe-card-desc">Avengers, X-Men, Spider-Man and the entire MCU at your fingertips.</p>
+            <span class="universe-card-arrow">→</span>
+          </a>
+          <a href="dc.html" class="universe-card universe-card-dc">
+            <div class="universe-card-icon">🦇</div>
+            <div class="universe-card-name">DC</div>
+            <p class="universe-card-desc">Batman, Superman, Wonder Woman — the DC Extended Universe awaits.</p>
+            <span class="universe-card-arrow">→</span>
+          </a>
+          <a href="pjo.html" class="universe-card universe-card-pjo">
+            <div class="universe-card-icon">🔱</div>
+            <div class="universe-card-name">PJO</div>
+            <p class="universe-card-desc">Percy Jackson, demigods, and the world of Greek mythology on screen.</p>
+            <span class="universe-card-arrow">→</span>
+          </a>
+        </div>
+      </section>
 
-    </section>
+      <hr class="divider" id="results-divider" style="display:none" />
+
+      <section id="results-section" style="display:none">
+        <div class="section-head">
+          <h2 id="results-heading">Results</h2>
+          <span class="count" id="results-count"></span>
+        </div>
+        <div class="results-grid" id="results-grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="modal-backdrop" class="modal-backdrop">
+    <div id="modal" class="modal">
+      <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+      <div id="modal-body" style="display:contents"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    MetaFlick - Powered by <a href="https://www.omdbapi.com/" target="_blank">OMDb API</a> - 2026
+  </footer>
+
+  <script type="module" src="index.js"></script>
 </body>
-</html>
+</html> 
