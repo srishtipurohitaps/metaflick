@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -6,3 +7,82 @@
     <link rel="stylesheet" href="styles.css"/>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦇</text></svg>"/>
 </head>
+<body class="page-dc">
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">Meta<span>Flick</span></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marvel.html">Marvel</a></li>
+                <li><a href="dc.html" class="active">DC</a></li>
+                <li><a href="pjo.html">Percy Jackson</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-wrapper">
+            <section class="universe-hero">
+                <div class="bg-title" style="color:var(--dc)">DC</div>
+                <canvas id="particles-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0"></canvas>
+                <p class="hero-eyebrow" style="color:var(--dc);position:relative;z-index:1;opacity:0;animation:fadeUp .6s .1s forwards">DC Extended Universe</p>
+                <h1 class="universe-title" style="position:relative;z-index:1;opacity:0;animation:fadeUp .6s .25s forwards">DC</h1>
+                <p class="universe-subtitle" style="position:relative;z-index:1;opacity:0;animation:fadeUp .6s .4s forwards">Batman, Superman, Wonder Woman, The Flash | Every Hero | All In One Search!</p>
+
+                <div class="phase-strip" style="position:relative;z-index:1;opacity:0;animation:fadeUp .6s .55s forwards">
+                    <button class="phase-btn active" data-query="Batman">Batman</button>
+                    <button class="phase-btn" data-query="Superman">Superman</button>
+                    <button class="phase-btn" data-query="Wonder Woman">Wonder Woman</button>
+                    <button class="phase-btn" data-query="The Flash">The Flash</button>
+                    <button class="phase-btn" data-query="Aquaman">Aquaman</button>
+                    <button class="phase-btn" data-query="Joker">Joker</button>
+                    <button class="phase-btn" data-query="Shazam">Shazam</button>
+                </div>
+            </section>
+
+            <div class="universe-search-wrap" style="opacity:0;animation:fadeUp .6s .65s forwards">
+                <div class="search-bar-wrap">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input
+                        id="search-input"
+                        class="search-input"
+                        type="text"
+                        placeholder="Search DC Movies..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <button id="search-btn" class="search-btn">Search</button>
+                </div>
+            </div>
+
+            <section id="results-section">
+                <div class="section-head">
+                    <h2 id="results-heading" style="color:var(--dc)">Batman</h2>
+                    <span class="count" id="results-count"></span>
+                </div>
+                <div class="results-grid" id="results-grid"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="modal-backdrop" class="modal-backdrop">
+        <div id="modal" class="modal">
+            <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+            <div id="modal-body" style="display:contents"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        MetaFlick - Powered by <a href="https://www.omdbapi.com/" target="_blank">OMDb API</a> - 2026
+    </footer>
+
+    <script type="module" src="dc.js"></script>
+</body>
+</html>
