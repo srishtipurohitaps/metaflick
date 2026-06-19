@@ -23,3 +23,66 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <div class="page-wrapper">
+            <section class="universe-hero">
+                <div class="bg-title" style="color:var(--pjo)">PJO</div>
+                <canvas id="particles-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0"></canvas>
+                <p class="hero-eyebrow" style="color:var(--pjo);position:relative;z-index:1;opacity:0;animation:fadeUp .6s .1s forwards">Percy Jackson & Greek Mythology</p>
+                <h1 class="universe-title" style="position:relative;z-index:1;opacity:0;animation:fadeUp .6s .25s forwards">PJO</h1>
+                <p class="universe-subtitle" style="position:relative;z-index:1;opacity:0;animation:fadeUp .6s .4s forwards">Percy Jackson, Annabeth, Grover, Olympus | Demigods on Screen | Every Film & Series!</p>
+                
+                <div class="phase-strip" style="position:relative;z-index:1;opacity:0;animation:fadeUp .6s .55s forwards">
+                    <button class="phase-btn active" data-query="Percy Jackson">Percy Jackson</button>
+                    <button class="phase-btn" data-query="Greek mythology">Greek Mythology</button>
+                    <button class="phase-btn" data-query="Clash of the Titans">Titans</button>
+                    <button class="phase-btn" data-query="Hercules">Hercules</button>
+                    <button class="phase-btn" data-query="Troy">Troy</button>
+                    <button class="phase-btn" data-query="300">300</button>
+                    <button class="phase-btn" data-query="Odyssey">Odyssey</button>
+                </div>
+            </section>
+
+             <div class="universe-search-wrap" style="opacity:0;animation:fadeUp .6s .65s forwards">
+                <div class="search-bar-wrap">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input
+                        id="search-input"
+                        class="search-input"
+                        type="text"
+                        placeholder="Search Percy Jackson & Mythology Movies..."
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <button id="search-btn" class="search-btn">Search</button>
+                </div>
+            </div>
+
+            <section id="results-section">
+                <div class="section-head">
+                    <h2 id="results-heading" style="color:var(--pjo)">Percy Jackson</h2>
+                    <span class="count" id="results-count"></span>
+                </div>
+                <div class="results-grid" id="results-grid"></div>
+            </section>
+                    
+                </div>
+    </main>
+
+     <div id="modal-backdrop" class="modal-backdrop">
+        <div id="modal" class="modal">
+            <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+            <div id="modal-body" style="display:contents"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        MetaFlick - Powered by <a href="https://www.omdbapi.com/" target="_blank">OMDb API</a> - 2026
+    </footer>
+
+    <script type="module" src="pjo.js"></script>
+</body>
+</html>
