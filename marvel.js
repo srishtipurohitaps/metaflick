@@ -29,7 +29,7 @@ async function runSearch(query) {
   countEl.textContent = `${data.Search.length} results`;
   data.Search.forEach(movie => {
     const card = buildCard(movie, ACCENT);
-    card.addEventListener('click', () => openDetail(movie.imdbID));\
+    card.addEventListener('click', () => openDetail(movie.imdbID));
     grid.appendChild(card);
   });
 }
