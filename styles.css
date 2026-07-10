@@ -1,0 +1,26 @@
+:root {
+    --marvel:      #e8222a;
+    --marvel-glow: rgba(232, 34, 42, 0.28);
+    --dc:          #1a6ff4;
+    --dc-glow:     rgba(26, 111, 244, 0.28);
+    --pjo:         #06b3c4;
+    --pjo-glow:    rgba(6, 179, 196, 0.28);
+
+    --ink:         #0e0c15;
+    --ink-1:       #171526;
+    --ink-2:       #201e30;
+    --ink-3:       #2c293f;
+    --seam:        #302d45;
+    --dust:        #6b6885;
+    --silver:      #ede9f8;
+
+    --radius-sm:   6px;
+    --radius-md:   12px;
+    --radius-lg:   18px;
+
+    --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    --font-body:    'DM Sans', system-ui, sans-serif;
+
+    --header-h:    62px;
+}
+
